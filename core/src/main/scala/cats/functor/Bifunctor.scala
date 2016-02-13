@@ -17,12 +17,12 @@ trait Bifunctor[F[_, _]] extends Any with Serializable { self =>
   /**
    * apply a function to the "left" functor
    */
-  def leftMap[A,B,C](fab: F[A, B])(f: A => C): F[C,B] = bimap(fab)(f, identity)
+  def leftMap[A, B, C](fab: F[A, B])(f: A => C): F[C, B] = bimap(fab)(f, identity)
 
   /**
    * apply a function ro the "right" functor
    */
-  def rightMap[A,B,C](fab: F[A, B])(f: B => C): F[A,C] = bimap(fab)(identity, f)
+  def rightMap[A, B, C](fab: F[A, B])(f: B => C): F[A, C] = bimap(fab)(identity, f)
 }
 
 object Bifunctor {

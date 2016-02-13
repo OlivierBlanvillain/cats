@@ -26,7 +26,7 @@ class FreeApplicativeTests extends CatsSuite {
   implicit val iso = CartesianTests.Isomorphisms.invariant[FreeApplicative[Option, ?]]
 
   checkAll("FreeApplicative[Option, ?]", ApplicativeTests[FreeApplicative[Option, ?]].applicative[Int, Int, Int])
-  checkAll("Monad[FreeApplicative[Option, ?]]", SerializableTests.serializable(Applicative[FreeApplicative[Option, ?]]))
+  checkAll("Applicative[FreeApplicative[Option, ?]]", SerializableTests.serializable(Applicative[FreeApplicative[Option, ?]]))
 
   test("FreeApplicative#fold") {
     val n = 2
@@ -83,7 +83,7 @@ class FreeApplicativeTests extends CatsSuite {
     fli1.analyze[G[Int]](countingNT) should === (List(4))
 
     val fli2 = FreeApplicative.lift[List, Int](List.empty)
-    fli2.analyze[G[Int]](countingNT) should ===(List(0))
+    fli2.analyze[G[Int]](countingNT) should === (List(0))
   }
 
   test("foldMap order of effects - regression check for #799") {

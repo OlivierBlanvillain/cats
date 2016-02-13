@@ -4,7 +4,9 @@ package free
 import cats.arrow.NaturalTransformation
 import cats.data.Const
 
-/** Applicative Functor for Free */
+/**
+ * Applicative Functor for Free
+ */
 sealed abstract class FreeApplicative[F[_], A] extends Product with Serializable { self =>
   // ap => apply alias needed so we can refer to both
   // FreeApplicative.ap and FreeApplicative#ap
@@ -27,15 +29,16 @@ sealed abstract class FreeApplicative[F[_], A] extends Product with Serializable
   /** Interprets/Runs the sequence of operations using the semantics of Applicative G
     * Tail recursive only if G provides tail recursive interpretation (ie G is FreeMonad)
     */
-  final def foldMap[G[_]](f: NaturalTransformation[F,G])(implicit G: Applicative[G]): G[A] =
+  final def foldMap[G[_]](f: NaturalTransformation[F, G])(implicit G: Applicative[G]): G[A] =
     this match {
       case Pure(a) => G.pure(a)
       case Ap(pivot, fn) => G.map2(f(pivot), fn.foldMap(f))((a, g) => g(a))
     }
 
-  /** Interpret/run the operations using the semantics of `Applicative[F]`.
-    * Tail recursive only if `F` provides tail recursive interpretation.
-    */
+  /**
+   * Interpret/run the operations using the semantics of `Applicative[F]`.
+   * Tail recursive only if `F` provides tail recursive interpretation.
+   */
   final def fold(implicit F: Applicative[F]): F[A] =
     foldMap(NaturalTransformation.id[F])
 
@@ -48,9 +51,9 @@ sealed abstract class FreeApplicative[F[_], A] extends Product with Serializable
     }
 
   /** Interpret this algebra into a Monoid */
-  final def analyze[M:Monoid](f: NaturalTransformation[F,λ[α => M]]): M =
-    foldMap[Const[M, ?]](new (NaturalTransformation[F,Const[M, ?]]) {
-      def apply[X](x: F[X]): Const[M,X] = Const(f(x))
+  final def analyze[M: Monoid](f: NaturalTransformation[F, λ[α => M]]): M =
+    foldMap[Const[M, ?]](new (NaturalTransformation[F, Const[M, ?]]) {
+      def apply[X](x: F[X]): Const[M, X] = Const(f(x))
     }).getConst
 
   /** Compile this FreeApplicative algebra into a Free algebra. */

@@ -81,7 +81,6 @@ private[data] sealed abstract class ConstInstances extends ConstInstances0 {
 }
 
 private[data] sealed abstract class ConstInstances0 extends ConstInstances1 {
-
   implicit def constSemigroup[A: Semigroup, B]: Semigroup[Const[A, B]] = new Semigroup[Const[A, B]] {
     def combine(x: Const[A, B], y: Const[A, B]): Const[A, B] = x combine y
   }

@@ -71,7 +71,7 @@ private[std] sealed trait Function1Instances extends Function1Instances0 {
       def compose[A, B, C](f: B => C, g: A => B): A => C = f.compose(g)
     }
 
-  implicit def function1Monoid[A,B](implicit M: Monoid[B]): Monoid[A => B] =
+  implicit def function1Monoid[A, B](implicit M: Monoid[B]): Monoid[A => B] =
     new Function1Monoid[A, B] { def B: Monoid[B] = M }
 
   implicit val function1MonoidK: MonoidK[Lambda[A => A => A]] =
@@ -79,7 +79,7 @@ private[std] sealed trait Function1Instances extends Function1Instances0 {
 }
 
 private[std] sealed trait Function1Instances0 {
-  implicit def function1Semigroup[A,B](implicit S: Semigroup[B]): Semigroup[A => B] =
+  implicit def function1Semigroup[A, B](implicit S: Semigroup[B]): Semigroup[A => B] =
     new Function1Semigroup[A, B] { def B: Semigroup[B] = S }
 
   implicit val function1SemigroupK: SemigroupK[Lambda[A => A => A]] =

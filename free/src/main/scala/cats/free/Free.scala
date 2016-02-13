@@ -7,9 +7,7 @@ import cats.data.Xor, Xor.{Left, Right}
 import cats.arrow.NaturalTransformation
 
 object Free {
-  /**
-   * Return from the computation with the given value.
-   */
+  /** Return from the computation with the given value. */
   private final case class Pure[S[_], A](a: A) extends Free[S, A]
 
   /** Suspend the computation with the given suspension. */
@@ -18,9 +16,7 @@ object Free {
   /** Call a subroutine and continue with the given function. */
   private final case class Gosub[S[_], B, C](c: Free[S, C], f: C => Free[S, B]) extends Free[S, B]
 
-  /**
-   * Suspend a value within a functor lifting it to a Free.
-   */
+  /** Suspend a value within a functor lifting it to a Free. */
   def liftF[F[_], A](value: F[A]): Free[F, A] = Suspend(value)
 
   /** Suspend the Free with the Applicative */
@@ -37,9 +33,7 @@ object Free {
 
   def inject[F[_], G[_]]: FreeInjectPartiallyApplied[F, G] = new FreeInjectPartiallyApplied
 
-  /**
-   * `Free[S, ?]` has a monad for any type constructor `S[_]`.
-   */
+  /** `Free[S, ?]` has a monad for any type constructor `S[_]`. */
   implicit def freeMonad[S[_]]: Monad[Free[S, ?]] =
     new Monad[Free[S, ?]] {
       def pure[A](a: A): Free[S, A] = Free.pure(a)
@@ -82,9 +76,7 @@ sealed abstract class Free[S[_], A] extends Product with Serializable {
     case x => x
   }
 
-  /**
-   * Evaluate a single layer of the free monad.
-   */
+  /** Evaluate a single layer of the free monad. */
   @tailrec
   final def resume(implicit S: Functor[S]): S[Free[S, A]] Xor A = this match {
     case Pure(a) => Right(a)

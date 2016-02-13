@@ -115,7 +115,7 @@ private[data] sealed trait OneAndInstances extends OneAndLowPriority2 {
 
   implicit def oneAndReducible[F[_]](implicit F: Foldable[F]): Reducible[OneAnd[F, ?]] =
     new NonEmptyReducible[OneAnd[F,?], F] {
-      override def split[A](fa: OneAnd[F,A]): (A, F[A]) = (fa.head, fa.tail)
+      override def split[A](fa: OneAnd[F, A]): (A, F[A]) = (fa.head, fa.tail)
     }
 
   implicit def oneAndMonad[F[_]](implicit monad: MonadCombine[F]): Monad[OneAnd[F, ?]] =
