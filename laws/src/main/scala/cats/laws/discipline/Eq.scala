@@ -50,4 +50,12 @@ object eq {
   implicit val unitEq: Eq[Unit] = new Eq[Unit] {
     def eqv(a: Unit, b: Unit): Boolean = true
   }
+
+  // To be removed once https://github.com/non/algebra/pull/125 is published
+  implicit class EqAnd[A](self: Eq[A]) {
+    def and(that: Eq[A]): Eq[A] =
+      new Eq[A] {
+        def eqv(x: A, y: A) = self.eqv(x, y) && that.eqv(x, y)
+      }
+  }
 }
