@@ -7,7 +7,7 @@ import cats.syntax.functor._
 /**
  * Laws that must be obeyed by any `Applicative`.
  */
-trait ApplicativeLaws[F[_]] extends ApplyLaws[F] {
+trait ApplicativeLaws[F[_]] extends ApplyLaws[F] with InvariantMonoidalLaws[F] {
   implicit override def F: Applicative[F]
 
   def applicativeIdentity[A](fa: F[A]): IsEq[F[A]] =

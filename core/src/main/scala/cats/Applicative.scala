@@ -13,14 +13,7 @@ import cats.std.list._
  *
  * Must obey the laws defined in cats.laws.ApplicativeLaws.
  */
-@typeclass trait Applicative[F[_]] extends Apply[F] { self =>
-
-  /**
-   * `pure` lifts any value into the Applicative Functor.
-   *
-   * Applicative[Option].pure(10) = Some(10)
-   */
-  def pure[A](x: A): F[A]
+@typeclass trait Applicative[F[_]] extends Apply[F] with InvariantMonoidal[F] { self =>
 
   /**
    * `pureEval` lifts any value into the Applicative Functor.
@@ -57,7 +50,7 @@ import cats.std.list._
 
   def sequence[G[_], A](as: G[F[A]])(implicit G: Traverse[G]): F[G[A]] =
     G.sequence(as)(this)
-  
+
 }
 
 trait CompositeApplicative[F[_],G[_]]
