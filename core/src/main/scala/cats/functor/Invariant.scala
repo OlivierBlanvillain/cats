@@ -34,7 +34,7 @@ import simulacrum.typeclass
   }
 }
 
-object Invariant extends AlgebraInvariantInstances {
+object Invariant extends KernelInvariantInstances {
   trait Composite[F[_], G[_]] extends Invariant[Lambda[X => F[G[X]]]] {
     def F: Invariant[F]
     def G: Invariant[G]
@@ -61,10 +61,10 @@ object Invariant extends AlgebraInvariantInstances {
 }
 
 /**
- * Invariant instances for types that are housed in Algebra and therefore
- * can't have instances for Cats type classes in their companion objects.
+ * Invariant instances for types that are housed in cats.kernel and therefore
+ * can't have instances for this type class in their companion objects.
  */
-private[functor] sealed trait AlgebraInvariantInstances {
+private[functor] sealed trait KernelInvariantInstances {
   implicit val invariantSemigroup: Invariant[Semigroup] = InvariantMonoidal.invariantMonoidalSemigroup
   implicit val invariantMonoid: Invariant[Monoid] = InvariantMonoidal.invariantMonoidalMonoid
 }

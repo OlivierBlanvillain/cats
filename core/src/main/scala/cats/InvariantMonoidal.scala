@@ -12,13 +12,13 @@ import simulacrum.typeclass
   def pure[A](a: A): F[A]
 }
 
-object InvariantMonoidal extends AlgebraInvariantMonoidalInstances
+object InvariantMonoidal extends KernelInvariantMonoidalInstances
 
 /**
- * InvariantMonoidal instances for types that are housed in Algebra and therefore
- * can't have instances for Cats type classes in their companion objects.
+ * InvariantMonoidal instances for types that are housed in cats.kernel and therefore
+ * can't have instances for this type class in their companion objects.
  */
-private[cats] trait AlgebraInvariantMonoidalInstances {
+private[cats] trait KernelInvariantMonoidalInstances {
   implicit val invariantMonoidalSemigroup: InvariantMonoidal[Semigroup] = new InvariantMonoidal[Semigroup] {
     def product[A, B](fa: Semigroup[A], fb: Semigroup[B]): Semigroup[(A, B)] = new Semigroup[(A, B)] {
       def combine(x: (A, B), y: (A, B)): (A, B) = fa.combine(x._1, y._1) -> fb.combine(x._2, y._2)
