@@ -16,13 +16,4 @@ import simulacrum.typeclass
   def product[A, B](fa: F[A], fb: F[B]): F[(A, B)]
 }
 
-object Cartesian extends CartesianArityFunctions with AlgebraCartesianInstances
-
-/**
- * Cartesian instances for types that are housed in Algebra and therefore
- * can't have instances for Cats type classes in their companion objects.
- */
-private[cats] sealed trait AlgebraCartesianInstances {
-  implicit val catsInvariantSemigroup: Cartesian[Semigroup] = InvariantMonoidal.catsInvariantMonoidalSemigroup
-  implicit val catsInvariantMonoid: Cartesian[Monoid] = InvariantMonoidal.catsInvariantMonoidalMonoid
-}
+object Cartesian extends CartesianArityFunctions
