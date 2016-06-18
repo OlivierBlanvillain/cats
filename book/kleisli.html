@@ -1,0 +1,892 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Kleisli · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="oneand.html" />
+    
+    
+    <link rel="prev" href="freemonad.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="typeclasses.html">
+            
+                <a href="typeclasses.html">
+            
+                    
+                    Typeclasses
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="applicative.html">
+            
+                <a href="applicative.html">
+            
+                    
+                    Applicative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    Apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contravariant.html">
+            
+                <a href="contravariant.html">
+            
+                    
+                    Contravariant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    Faq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="foldable.html">
+            
+                <a href="foldable.html">
+            
+                    
+                    Foldable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="functor.html">
+            
+                <a href="functor.html">
+            
+                    
+                    Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="id.html">
+            
+                <a href="id.html">
+            
+                    
+                    Id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="invariant.html">
+            
+                <a href="invariant.html">
+            
+                    
+                    Invariant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="monad.html">
+            
+                <a href="monad.html">
+            
+                    
+                    Monad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="monadcombine.md">
+            
+                <a href="monadcombine.md">
+            
+                    
+                    Monadcombine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="monadfilter.md">
+            
+                <a href="monadfilter.md">
+            
+                    
+                    Monadfilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="monoid.html">
+            
+                <a href="monoid.html">
+            
+                    
+                    Monoid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="monoidk.md">
+            
+                <a href="monoidk.md">
+            
+                    
+                    Monoidk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="semigroup.html">
+            
+                <a href="semigroup.html">
+            
+                    
+                    Semigroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="semigroupk.html">
+            
+                <a href="semigroupk.html">
+            
+                    
+                    Semigroupk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="show.md">
+            
+                <a href="show.md">
+            
+                    
+                    Show
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="traverse.html">
+            
+                <a href="traverse.html">
+            
+                    
+                    Traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Data Types
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="const.html">
+            
+                <a href="const.html">
+            
+                    
+                    Const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="freeapplicative.html">
+            
+                <a href="freeapplicative.html">
+            
+                    
+                    Freeapplicative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="freemonad.html">
+            
+                <a href="freemonad.html">
+            
+                    
+                    Freemonad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="kleisli.html">
+            
+                <a href="kleisli.html">
+            
+                    
+                    Kleisli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="oneand.html">
+            
+                <a href="oneand.html">
+            
+                    
+                    Oneand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="optiont.html">
+            
+                <a href="optiont.html">
+            
+                    
+                    Optiont
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="state.html">
+            
+                <a href="state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="validated.html">
+            
+                <a href="validated.html">
+            
+                    
+                    Validated
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="xor.html">
+            
+                <a href="xor.html">
+            
+                    
+                    Xor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CONTRIBUTING.html">
+            
+                <a href="CONTRIBUTING.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PROCESS.html">
+            
+                <a href="PROCESS.html">
+            
+                    
+                    Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="AUTHORS.html">
+            
+                <a href="AUTHORS.html">
+            
+                    
+                    Authors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CHANGES.html">
+            
+                <a href="CHANGES.html">
+            
+                    
+                    Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Kleisli</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="kleisli">Kleisli</h1>
+<p>Kleisli enables composition of functions that return a monadic value, for instance an <code>Option[Int]</code> 
+or a <code>Xor[String, List[Double]]</code>, without having functions take an <code>Option</code> or <code>Xor</code> as a parameter, 
+which can be strange and unwieldy.</p>
+<p>We may also have several functions which depend on some environment and want a nice way to compose these functions
+to ensure they all receive the same environment. Or perhaps we have functions which depend on their own &quot;local&quot;
+configuration and all the configurations together make up a &quot;global&quot; application configuration. How do we
+have these functions play nice with each other despite each only knowing about their own local requirements?</p>
+<p>These situations are where <code>Kleisli</code> is immensely helpful.</p>
+<h2 id="functions">Functions</h2>
+<p>One of the most useful properties of functions is that they <strong>compose</strong>. That is, given a function
+<code>A =&gt; B</code> and a function <code>B =&gt; C</code>, we can combine them to create a new function <code>A =&gt; C</code>. It is through
+this compositional property that we are able to write many small functions and compose them together
+to create a larger one that suits our needs.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> twice: <span class="hljs-type">Int</span> =&gt; <span class="hljs-type">Int</span> =
+  x =&gt; x * <span class="hljs-number">2</span>
+
+<span class="hljs-keyword">val</span> countCats: <span class="hljs-type">Int</span> =&gt; <span class="hljs-type">String</span> =
+  x =&gt; <span class="hljs-keyword">if</span> (x == <span class="hljs-number">1</span>) <span class="hljs-string">&quot;1 cat&quot;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">s&quot;<span class="hljs-subst">$x</span> cats&quot;</span>
+
+<span class="hljs-keyword">val</span> twiceAsManyCats: <span class="hljs-type">Int</span> =&gt; <span class="hljs-type">String</span> =
+  twice andThen countCats <span class="hljs-comment">// equivalent to: countCats compose twice</span>
+</code></pre>
+<p>Thus.</p>
+<pre><code class="lang-scala">twiceAsManyCats(<span class="hljs-number">1</span>) <span class="hljs-comment">// &quot;2 cats&quot;</span>
+<span class="hljs-comment">// res2: String = 2 cats</span>
+</code></pre>
+<p>Sometimes, our functions will need to return monadic values. For instance, consider the following set of functions.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> parse: <span class="hljs-type">String</span> =&gt; <span class="hljs-type">Option</span>[<span class="hljs-type">Int</span>] =
+  s =&gt; <span class="hljs-keyword">if</span> (s.matches(<span class="hljs-string">&quot;-?[0-9]+&quot;</span>)) <span class="hljs-type">Some</span>(s.toInt) <span class="hljs-keyword">else</span> <span class="hljs-type">None</span>
+
+<span class="hljs-keyword">val</span> reciprocal: <span class="hljs-type">Int</span> =&gt; <span class="hljs-type">Option</span>[<span class="hljs-type">Double</span>] =
+  i =&gt; <span class="hljs-keyword">if</span> (i != <span class="hljs-number">0</span>) <span class="hljs-type">Some</span>(<span class="hljs-number">1.0</span> / i) <span class="hljs-keyword">else</span> <span class="hljs-type">None</span>
+</code></pre>
+<p>As it stands we cannot use <code>Function1.compose</code> (or <code>Function1.andThen</code>) to compose these two functions.
+The output type of <code>parse</code> is <code>Option[Int]</code> whereas the input type of <code>reciprocal</code> is <code>Int</code>.</p>
+<p>This is where <code>Kleisli</code> comes into play.</p>
+<h2 id="kleisli">Kleisli</h2>
+<p>At it&apos;s core, <code>Kleisli[F[_], A, B]</code> is just a wrapper around the function <code>A =&gt; F[B]</code>. Depending on the
+properties of the <code>F[_]</code>, we can do different things with <code>Kleisli</code>s. For instance, if <code>F[_]</code> has a
+<code>FlatMap[F]</code> instance (we can call <code>flatMap</code> on <code>F[A]</code> values), we can
+compose two <code>Kleisli</code>s much like we can two functions.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> cats.<span class="hljs-type">FlatMap</span>
+<span class="hljs-keyword">import</span> cats.implicits._
+
+<span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kleisli</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>, <span class="hljs-title">B</span>](<span class="hljs-params">run: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compose</span></span>[<span class="hljs-type">Z</span>](k: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">A</span>])(<span class="hljs-keyword">implicit</span> <span class="hljs-type">F</span>: <span class="hljs-type">FlatMap</span>[<span class="hljs-type">F</span>]): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>] =
+    <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>](z =&gt; k.run(z).flatMap(run))
+}
+</code></pre>
+<p>Returning to our earlier example:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// Bring in cats.FlatMap[Option] instance</span>
+<span class="hljs-keyword">import</span> cats.implicits._
+
+<span class="hljs-keyword">val</span> parse = <span class="hljs-type">Kleisli</span>((s: <span class="hljs-type">String</span>) =&gt; <span class="hljs-keyword">try</span> { <span class="hljs-type">Some</span>(s.toInt) } <span class="hljs-keyword">catch</span> { <span class="hljs-keyword">case</span> _: <span class="hljs-type">NumberFormatException</span> =&gt; <span class="hljs-type">None</span> })
+
+<span class="hljs-keyword">val</span> reciprocal = <span class="hljs-type">Kleisli</span>((i: <span class="hljs-type">Int</span>) =&gt; <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>) <span class="hljs-type">None</span> <span class="hljs-keyword">else</span> <span class="hljs-type">Some</span>(<span class="hljs-number">1.0</span> / i))
+
+<span class="hljs-keyword">val</span> parseAndReciprocal = reciprocal.compose(parse)
+</code></pre>
+<p><code>Kleisli#andThen</code> can be defined similarly.</p>
+<p>It is important to note that the <code>F[_]</code> having a <code>FlatMap</code> (or a <code>Monad</code>) instance is not a hard requirement -
+we can do useful things with weaker requirements. Such an example would be <code>Kleisli#map</code>, which only requires
+that <code>F[_]</code> have a <code>Functor</code> instance (e.g. is equipped with <code>map: F[A] =&gt; (A =&gt; B) =&gt; F[B]</code>).</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> cats.<span class="hljs-type">Functor</span>
+
+<span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kleisli</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>, <span class="hljs-title">B</span>](<span class="hljs-params">run: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">C</span>](f: <span class="hljs-type">B</span> =&gt; <span class="hljs-type">C</span>)(<span class="hljs-keyword">implicit</span> <span class="hljs-type">F</span>: <span class="hljs-type">Functor</span>[<span class="hljs-type">F</span>]): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">A</span>, <span class="hljs-type">C</span>] =
+    <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">A</span>, <span class="hljs-type">C</span>](a =&gt; <span class="hljs-type">F</span>.map(run(a))(f))
+}
+</code></pre>
+<p>Below are some more methods on <code>Kleisli</code> that can be used so long as the constraint on <code>F[_]</code>
+is satisfied.</p>
+<pre><code>Method    | Constraint on `F[_]`
+--------- | -------------------
+andThen   | FlatMap
+compose   | FlatMap
+flatMap   | FlatMap
+lower     | Monad
+map       | Functor
+traverse  | Applicative
+</code></pre><h3 id="type-class-instances">Type class instances</h3>
+<p>The type class instances for <code>Kleisli</code>, like that for functions, often fix the input type (and the <code>F[_]</code>) and leave
+the output type free. What type class instances it has tends to depend on what instances the <code>F[_]</code> has. For
+instance, <code>Kleisli[F, A, B]</code> has a <code>Functor</code> instance so long as the chosen <code>F[_]</code> does. It has a <code>Monad</code>
+instance so long as the chosen <code>F[_]</code> does. The instances in Cats are laid out in a way such that implicit
+resolution will pick up the most specific instance it can (depending on the <code>F[_]</code>).</p>
+<p>An example of a <code>Monad</code> instance for <code>Kleisli</code> is shown below.</p>
+<p><em>Note</em>: the example below assumes usage of the <a href="https://github.com/non/kind-projector" _target="blank">kind-projector compiler plugin</a> and will not compile if it is not being used in a project.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> cats.implicits._
+
+<span class="hljs-comment">// We can define a FlatMap instance for Kleisli if the F[_] we chose has a FlatMap instance</span>
+<span class="hljs-comment">// Note the input type and F are fixed, with the output type left free</span>
+<span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">kleisliFlatMap</span></span>[<span class="hljs-type">F</span>[_], <span class="hljs-type">Z</span>](<span class="hljs-keyword">implicit</span> <span class="hljs-type">F</span>: <span class="hljs-type">FlatMap</span>[<span class="hljs-type">F</span>]): <span class="hljs-type">FlatMap</span>[<span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, ?]] =
+  <span class="hljs-keyword">new</span> <span class="hljs-type">FlatMap</span>[<span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, ?]] {
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](fa: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>]): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>] =
+      <span class="hljs-type">Kleisli</span>(z =&gt; fa.run(z).flatMap(a =&gt; f(a).run(z)))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](fa: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>] =
+      <span class="hljs-type">Kleisli</span>(z =&gt; fa.run(z).map(f))
+  }
+</code></pre>
+<p>Below is a table of some of the type class instances <code>Kleisli</code> can have depending on what instances <code>F[_]</code> has.</p>
+<pre><code>Type class     | Constraint on `F[_]`
+-------------- | -------------------
+Functor        | Functor
+Apply          | Apply
+Applicative    | Applicative
+FlatMap        | FlatMap
+Monad          | Monad
+Arrow          | Monad
+Split          | FlatMap
+Strong         | Functor
+SemigroupK*    | FlatMap
+MonoidK*       | Monad
+</code></pre><p>*These instances only exist for Kleisli arrows with identical input and output types; that is, 
+<code>Kleisli[F, A, A]</code> for some type A. These instances use Kleisli composition as the <code>combine</code> operation,
+and <code>Monad.pure</code> as the <code>empty</code> value.</p>
+<p>Also, there is an instance of <code>Monoid[Kleisli[F, A, B]]</code> if there is an instance of <code>Monoid[F[B]]</code>. 
+<code>Monoid.combine</code> here creates a new Kleisli arrow which takes an <code>A</code> value and feeds it into each 
+of the combined Kleisli arrows, which together return two <code>F[B]</code> values. Then, they are combined into one 
+using the <code>Monoid[F[B]]</code> instance.</p>
+<h2 id="other-uses">Other uses</h2>
+<h3 id="monad-transformers">Monad Transformers</h3>
+<p>Many data types have a monad transformer equivalent that allows us to compose the <code>Monad</code> instance of the data
+type with any other <code>Monad</code> instance. For instance, <code>OptionT[F[_], A]</code> allows us to compose the monadic properties
+of <code>Option</code> with any other <code>F[_]</code>, such as a <code>List</code>. This allows us to work with nested contexts/effects in a
+nice way (for example, in for-comprehensions).</p>
+<p><code>Kleisli</code> can be viewed as the monad transformer for functions. Recall that at its essence, <code>Kleisli[F, A, B]</code>
+is just a function <code>A =&gt; F[B]</code>, with niceties to make working with the value we actually care about, the <code>B</code>, easy.
+<code>Kleisli</code> allows us to take the effects of functions and have them play nice with the effects of any other <code>F[_]</code>.</p>
+<p>This may raise the question, what exactly is the &quot;effect&quot; of a function?</p>
+<p>Well, if we take a look at any function, we can see it takes some input and produces some output with it, without
+having touched the input (assuming the function is pure, i.e.
+<a href="https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29" _target="blank">referentially transparent</a>).
+That is, we take a read-only value, and produce some value with it. For this reason, the type class instances for
+functions often refer to the function as a <code>Reader</code>. For instance, it is common to hear about the <code>Reader</code> monad.
+In the same spirit, Cats defines a <code>Reader</code> type alias along the lines of:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// We want A =&gt; B, but Kleisli provides A =&gt; F[B]. To make the types/shapes match,</span>
+<span class="hljs-comment">// we need an F[_] such that providing it a type A is equivalent to A</span>
+<span class="hljs-comment">// This can be thought of as the type-level equivalent of the identity function</span>
+<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Id</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">A</span>
+
+<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Reader</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Reader</span> </span>{
+  <span class="hljs-comment">// Lifts a plain function A =&gt; B into a Kleisli, giving us access</span>
+  <span class="hljs-comment">// to all the useful methods and type class instances</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>): <span class="hljs-type">Reader</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] = <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">A</span>, <span class="hljs-type">B</span>](f)
+}
+
+<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">ReaderT</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>, <span class="hljs-title">B</span>] </span>= <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
+<span class="hljs-keyword">val</span> <span class="hljs-type">ReaderT</span> = <span class="hljs-type">Kleisli</span>
+</code></pre>
+<p>The <code>ReaderT</code> value alias exists to allow users to use the <code>Kleisli</code> companion object as if it were <code>ReaderT</code>, if
+they were so inclined.</p>
+<p>The topic of functions as a read-only environment brings us to our next common use case of <code>Kleisli</code> - configuration.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Functional programming advocates the creation of programs and modules by composing smaller, simpler modules. This
+philosophy intentionally mirrors that of function composition - write many small functions, and compose them
+to build larger ones. After all, our programs are just functions.</p>
+<p>Let&apos;s look at some example modules, where each module has it&apos;s own configuration that is validated by a function.
+If the configuration is good, we return a <code>Some</code> of the module, otherwise a <code>None</code>. This example uses <code>Option</code> for
+simplicity - if you want to provide error messages or other failure context, consider using <code>Xor</code> instead.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DbConfig</span>(<span class="hljs-params">url: <span class="hljs-type">String</span>, user: <span class="hljs-type">String</span>, pass: <span class="hljs-type">String</span></span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Db</span></span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Db</span> </span>{
+  <span class="hljs-keyword">val</span> fromDbConfig: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">DbConfig</span>, <span class="hljs-type">Db</span>] = ???
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ServiceConfig</span>(<span class="hljs-params">addr: <span class="hljs-type">String</span>, port: <span class="hljs-type">Int</span></span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Service</span></span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Service</span> </span>{
+  <span class="hljs-keyword">val</span> fromServiceConfig: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">ServiceConfig</span>, <span class="hljs-type">Service</span>] = ???
+}
+</code></pre>
+<p>We have two independent modules, a <code>Db</code> (allowing access to a database) and a <code>Service</code> (supporting an API to provide
+data over the web). Both depend on their own configuration parameters. Neither know or care about the other, as it
+should be. However our application needs both of these modules to work. It is plausible we then have a more global
+application configuration.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppConfig</span>(<span class="hljs-params">dbConfig: <span class="hljs-type">DbConfig</span>, serviceConfig: <span class="hljs-type">ServiceConfig</span></span>)</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span>(<span class="hljs-params">db: <span class="hljs-type">Db</span>, service: <span class="hljs-type">Service</span></span>)</span>
+</code></pre>
+<p>As it stands, we cannot use both <code>Kleisli</code> validation functions together nicely - one takes a <code>DbConfig</code>, the
+other a <code>ServiceConfig</code>. That means the <code>FlatMap</code> (and by extension, the <code>Monad</code>) instances differ (recall the
+input type is fixed in the type class instances). However, there is a nice function on <code>Kleisli</code> called <code>local</code>.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kleisli</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>, <span class="hljs-title">B</span>](<span class="hljs-params">run: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">local</span></span>[<span class="hljs-type">AA</span>](f: <span class="hljs-type">AA</span> =&gt; <span class="hljs-type">A</span>): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">AA</span>, <span class="hljs-type">B</span>] = <span class="hljs-type">Kleisli</span>(f.andThen(run))
+}
+</code></pre>
+<p>What <code>local</code> allows us to do is essentially &quot;expand&quot; our input type to a more &quot;general&quot; one. In our case, we
+can take a <code>Kleisli</code> that expects a <code>DbConfig</code> or <code>ServiceConfig</code> and turn it into one that expects an <code>AppConfig</code>,
+so long as we tell it how to go from an <code>AppConfig</code> to the other configs.</p>
+<p>Now we can create our application config validator!</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kleisli</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">Z</span>, <span class="hljs-title">A</span>](<span class="hljs-params">run: <span class="hljs-type">Z</span> =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">A</span>]</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">B</span>](f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>])(<span class="hljs-keyword">implicit</span> <span class="hljs-type">F</span>: <span class="hljs-type">FlatMap</span>[<span class="hljs-type">F</span>]): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>] =
+    <span class="hljs-type">Kleisli</span>(z =&gt; <span class="hljs-type">F</span>.flatMap(run(z))(a =&gt; f(a).run(z)))
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">B</span>](f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>)(<span class="hljs-keyword">implicit</span> <span class="hljs-type">F</span>: <span class="hljs-type">Functor</span>[<span class="hljs-type">F</span>]): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">Z</span>, <span class="hljs-type">B</span>] =
+    <span class="hljs-type">Kleisli</span>(z =&gt; <span class="hljs-type">F</span>.map(run(z))(f))
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">local</span></span>[<span class="hljs-type">ZZ</span>](f: <span class="hljs-type">ZZ</span> =&gt; <span class="hljs-type">Z</span>): <span class="hljs-type">Kleisli</span>[<span class="hljs-type">F</span>, <span class="hljs-type">ZZ</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">Kleisli</span>(f.andThen(run))
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DbConfig</span>(<span class="hljs-params">url: <span class="hljs-type">String</span>, user: <span class="hljs-type">String</span>, pass: <span class="hljs-type">String</span></span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Db</span></span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Db</span> </span>{
+  <span class="hljs-keyword">val</span> fromDbConfig: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">DbConfig</span>, <span class="hljs-type">Db</span>] = ???
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ServiceConfig</span>(<span class="hljs-params">addr: <span class="hljs-type">String</span>, port: <span class="hljs-type">Int</span></span>)</span>
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Service</span></span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Service</span> </span>{
+  <span class="hljs-keyword">val</span> fromServiceConfig: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">ServiceConfig</span>, <span class="hljs-type">Service</span>] = ???
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppConfig</span>(<span class="hljs-params">dbConfig: <span class="hljs-type">DbConfig</span>, serviceConfig: <span class="hljs-type">ServiceConfig</span></span>)</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span>(<span class="hljs-params">db: <span class="hljs-type">Db</span>, service: <span class="hljs-type">Service</span></span>)</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">appFromAppConfig</span></span>: <span class="hljs-type">Kleisli</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">AppConfig</span>, <span class="hljs-type">App</span>] =
+  <span class="hljs-keyword">for</span> {
+    db &lt;- <span class="hljs-type">Db</span>.fromDbConfig.local[<span class="hljs-type">AppConfig</span>](_.dbConfig)
+    sv &lt;- <span class="hljs-type">Service</span>.fromServiceConfig.local[<span class="hljs-type">AppConfig</span>](_.serviceConfig)
+  } <span class="hljs-keyword">yield</span> <span class="hljs-keyword">new</span> <span class="hljs-type">App</span>(db, sv)
+</code></pre>
+<p>What if we need a module that doesn&apos;t need any config validation, say a strategy to log events? We would have such a
+module be instantiated from a config directly, without an <code>Option</code> - we would have something like
+<code>Kleisli[Id, LogConfig, Log]</code> (alternatively, <code>Reader[LogConfig, Log]</code>). However, this won&apos;t play nice with our other
+<code>Kleisli</code>s since those use <code>Option</code> instead of <code>Id</code>.</p>
+<p>We can define a <code>lift</code> method on <code>Kleisli</code> (available already on <code>Kleisli</code> in Cats) that takes a type parameter <code>G[_]</code>
+such that <code>G</code> has an <code>Applicative</code> instance and lifts a <code>Kleisli</code> value such that its output type is <code>G[F[B]]</code>. This
+allows us to then lift a <code>Reader[A, B]</code> into a <code>Kleisli[G, A, B]</code>. Note that lifting a <code>Reader[A, B]</code> into some <code>G[_]</code>
+is equivalent to having a <code>Kleisli[G, A, B]</code> since <code>Reader[A, B]</code> is just a type alias for <code>Kleisli[Id, A, B]</code>, and
+<code>type Id[A] = A</code> so <code>G[Id[A]]</code> is equivalent to <code>G[A]</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="freemonad.html" class="navigation navigation-prev " aria-label="Previous page: Freemonad">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="oneand.html" class="navigation navigation-next " aria-label="Next page: Oneand">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"default","title":"Kleisli","section":"data","source":"core/src/main/scala/cats/data/Kleisli.scala","scaladoc":"#cats.data.Kleisli","level":"1.3.4","depth":2,"next":{"title":"Oneand","level":"1.3.5","depth":2,"path":"oneand.md","ref":"oneand.md","articles":[]},"previous":{"title":"Freemonad","level":"1.3.3","depth":2,"path":"freemonad.md","ref":"freemonad.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"kleisli.md","mtime":"2016-06-18T19:51:32.300Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-18T20:02:33.141Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

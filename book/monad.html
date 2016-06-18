@@ -1,0 +1,749 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Monad · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="monadcombine.md" />
+    
+    
+    <link rel="prev" href="invariant.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="typeclasses.html">
+            
+                <a href="typeclasses.html">
+            
+                    
+                    Typeclasses
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="applicative.html">
+            
+                <a href="applicative.html">
+            
+                    
+                    Applicative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    Apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contravariant.html">
+            
+                <a href="contravariant.html">
+            
+                    
+                    Contravariant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    Faq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="foldable.html">
+            
+                <a href="foldable.html">
+            
+                    
+                    Foldable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="functor.html">
+            
+                <a href="functor.html">
+            
+                    
+                    Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="id.html">
+            
+                <a href="id.html">
+            
+                    
+                    Id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="invariant.html">
+            
+                <a href="invariant.html">
+            
+                    
+                    Invariant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="monad.html">
+            
+                <a href="monad.html">
+            
+                    
+                    Monad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="monadcombine.md">
+            
+                <a href="monadcombine.md">
+            
+                    
+                    Monadcombine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="monadfilter.md">
+            
+                <a href="monadfilter.md">
+            
+                    
+                    Monadfilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="monoid.html">
+            
+                <a href="monoid.html">
+            
+                    
+                    Monoid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="monoidk.md">
+            
+                <a href="monoidk.md">
+            
+                    
+                    Monoidk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="semigroup.html">
+            
+                <a href="semigroup.html">
+            
+                    
+                    Semigroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="semigroupk.html">
+            
+                <a href="semigroupk.html">
+            
+                    
+                    Semigroupk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="show.md">
+            
+                <a href="show.md">
+            
+                    
+                    Show
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="traverse.html">
+            
+                <a href="traverse.html">
+            
+                    
+                    Traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Data Types
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="const.html">
+            
+                <a href="const.html">
+            
+                    
+                    Const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="freeapplicative.html">
+            
+                <a href="freeapplicative.html">
+            
+                    
+                    Freeapplicative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="freemonad.html">
+            
+                <a href="freemonad.html">
+            
+                    
+                    Freemonad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="kleisli.html">
+            
+                <a href="kleisli.html">
+            
+                    
+                    Kleisli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="oneand.html">
+            
+                <a href="oneand.html">
+            
+                    
+                    Oneand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="optiont.html">
+            
+                <a href="optiont.html">
+            
+                    
+                    Optiont
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="state.html">
+            
+                <a href="state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="validated.html">
+            
+                <a href="validated.html">
+            
+                    
+                    Validated
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="xor.html">
+            
+                <a href="xor.html">
+            
+                    
+                    Xor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CONTRIBUTING.html">
+            
+                <a href="CONTRIBUTING.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PROCESS.html">
+            
+                <a href="PROCESS.html">
+            
+                    
+                    Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="AUTHORS.html">
+            
+                <a href="AUTHORS.html">
+            
+                    
+                    Authors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CHANGES.html">
+            
+                <a href="CHANGES.html">
+            
+                    
+                    Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Monad</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="monad">Monad</h1>
+<p><code>Monad</code> extends the <a href="applicative.html"><code>Applicative</code></a> type class with a
+new function <code>flatten</code>. Flatten takes a value in a nested context (eg.
+<code>F[F[A]]</code> where F is the context) and &quot;joins&quot; the contexts together so
+that we have a single context (ie. <code>F[A]</code>).</p>
+<p>The name <code>flatten</code> should remind you of the functions of the same name on many
+classes in the standard library.</p>
+<pre><code class="lang-scala"><span class="hljs-type">Option</span>(<span class="hljs-type">Option</span>(<span class="hljs-number">1</span>)).flatten
+<span class="hljs-comment">// res0: Option[Int] = Some(1)</span>
+
+<span class="hljs-type">Option</span>(<span class="hljs-type">None</span>).flatten
+<span class="hljs-comment">// res1: Option[Nothing] = None</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>),<span class="hljs-type">List</span>(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)).flatten
+<span class="hljs-comment">// res2: List[Int] = List(1, 2, 3)</span>
+</code></pre>
+<h3 id="monad-instances">Monad instances</h3>
+<p>If <code>Applicative</code> is already present and <code>flatten</code> is well-behaved,
+extending the <code>Applicative</code> to a <code>Monad</code> is trivial. To provide evidence
+that a type belongs in the <code>Monad</code> type class, cats&apos; implementation
+requires us to provide an implementation of <code>pure</code> (which can be reused
+from <code>Applicative</code>) and <code>flatMap</code>.</p>
+<p>We can use <code>flatten</code> to define <code>flatMap</code>: <code>flatMap</code> is just <code>map</code>
+followed by <code>flatten</code>. Conversely, <code>flatten</code> is just <code>flatMap</code> using
+the identity function <code>x =&gt; x</code> (i.e. <code>flatMap(_)(x =&gt; x)</code>).</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> cats._
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">optionMonad</span></span>(<span class="hljs-keyword">implicit</span> app: <span class="hljs-type">Applicative</span>[<span class="hljs-type">Option</span>]) =
+  <span class="hljs-keyword">new</span> <span class="hljs-type">Monad</span>[<span class="hljs-type">Option</span>] {
+    <span class="hljs-comment">// Define flatMap using Option&apos;s flatten method</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](fa: <span class="hljs-type">Option</span>[<span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Option</span>[<span class="hljs-type">B</span>]): <span class="hljs-type">Option</span>[<span class="hljs-type">B</span>] =
+      app.map(fa)(f).flatten
+    <span class="hljs-comment">// Reuse this definition from Applicative.</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pure</span></span>[<span class="hljs-type">A</span>](a: <span class="hljs-type">A</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">A</span>] = app.pure(a)
+  }
+</code></pre>
+<h3 id="flatmap">flatMap</h3>
+<p><code>flatMap</code> is often considered to be the core function of <code>Monad</code>, and cats
+follows this tradition by providing implementations of <code>flatten</code> and <code>map</code>
+derived from <code>flatMap</code> and <code>pure</code>.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> listMonad = <span class="hljs-keyword">new</span> <span class="hljs-type">Monad</span>[<span class="hljs-type">List</span>] {
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](fa: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">List</span>[<span class="hljs-type">B</span>]): <span class="hljs-type">List</span>[<span class="hljs-type">B</span>] = fa.flatMap(f)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pure</span></span>[<span class="hljs-type">A</span>](a: <span class="hljs-type">A</span>): <span class="hljs-type">List</span>[<span class="hljs-type">A</span>] = <span class="hljs-type">List</span>(a)
+}
+</code></pre>
+<p>Part of the reason for this is that name <code>flatMap</code> has special significance in
+scala, as for-comprehensions rely on this method to chain together operations
+in a monadic context.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.reflect.runtime.universe
+<span class="hljs-comment">// import scala.reflect.runtime.universe</span>
+
+universe.reify(
+  <span class="hljs-keyword">for</span> {
+    x &lt;- <span class="hljs-type">Some</span>(<span class="hljs-number">1</span>)
+    y &lt;- <span class="hljs-type">Some</span>(<span class="hljs-number">2</span>)
+  } <span class="hljs-keyword">yield</span> x + y
+).tree
+<span class="hljs-comment">// res4: reflect.runtime.universe.Tree = Some.apply(1).flatMap(((x) =&gt; Some.apply(2).map(((y) =&gt; x.$plus(y)))))</span>
+</code></pre>
+<h3 id="ifm">ifM</h3>
+<p><code>Monad</code> provides the ability to choose later operations in a sequence based on
+the results of earlier ones. This is embodied in <code>ifM</code>, which lifts an <code>if</code>
+statement into the monadic context.</p>
+<pre><code class="lang-scala"><span class="hljs-type">Monad</span>[<span class="hljs-type">List</span>].ifM(<span class="hljs-type">List</span>(<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>))(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>), <span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))
+<span class="hljs-comment">// res5: List[Int] = List(1, 2, 3, 4, 1, 2)</span>
+</code></pre>
+<h3 id="composition">Composition</h3>
+<p>Unlike <a href="functor.html"><code>Functor</code>s</a> and <a href="applicative.html"><code>Applicative</code>s</a>,
+not all <code>Monad</code>s compose. This means that even if <code>M[_]</code> and <code>N[_]</code> are
+both <code>Monad</code>s, <code>M[N[_]]</code> is not guaranteed to be a <code>Monad</code>.</p>
+<p>However, many common cases do. One way of expressing this is to provide
+instructions on how to compose any outer monad (<code>F</code> in the following
+example) with a specific inner monad (<code>Option</code> in the following
+example).</p>
+<p><em>Note</em>: the example below assumes usage of the <a href="https://github.com/non/kind-projector" _target="blank">kind-projector compiler plugin</a> and will not compile if it is not being used in a project.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OptionT</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>](<span class="hljs-params">value: <span class="hljs-type">F</span>[<span class="hljs-type">Option</span>[<span class="hljs-type">A</span>]]</span>)</span>
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">optionTMonad</span></span>[<span class="hljs-type">F</span>[_]](<span class="hljs-keyword">implicit</span> <span class="hljs-type">F</span> : <span class="hljs-type">Monad</span>[<span class="hljs-type">F</span>]) = {
+  <span class="hljs-keyword">new</span> <span class="hljs-type">Monad</span>[<span class="hljs-type">OptionT</span>[<span class="hljs-type">F</span>, ?]] {
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pure</span></span>[<span class="hljs-type">A</span>](a: <span class="hljs-type">A</span>): <span class="hljs-type">OptionT</span>[<span class="hljs-type">F</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">OptionT</span>(<span class="hljs-type">F</span>.pure(<span class="hljs-type">Some</span>(a)))
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](fa: <span class="hljs-type">OptionT</span>[<span class="hljs-type">F</span>, <span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">OptionT</span>[<span class="hljs-type">F</span>, <span class="hljs-type">B</span>]): <span class="hljs-type">OptionT</span>[<span class="hljs-type">F</span>, <span class="hljs-type">B</span>] =
+      <span class="hljs-type">OptionT</span> {
+        <span class="hljs-type">F</span>.flatMap(fa.value) {
+          <span class="hljs-keyword">case</span> <span class="hljs-type">None</span> =&gt; <span class="hljs-type">F</span>.pure(<span class="hljs-type">None</span>)
+          <span class="hljs-keyword">case</span> <span class="hljs-type">Some</span>(a) =&gt; f(a).value
+        }
+      }
+  }
+}
+</code></pre>
+<p>This sort of construction is called a monad transformer.</p>
+<p>Cats has an <a href="optiont.html"><code>OptionT</code></a> monad transformer, which adds a lot of useful functions to the simple implementation above.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="invariant.html" class="navigation navigation-prev " aria-label="Previous page: Invariant">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="monadcombine.md" class="navigation navigation-next " aria-label="Next page: Monadcombine">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"default","title":"Monad","section":"typeclasses","source":"core/src/main/scala/cats/Monad.scala","scaladoc":"#cats.Monad","level":"1.2.9","depth":2,"next":{"title":"Monadcombine","level":"1.2.10","depth":2,"path":"monadcombine.md","ref":"monadcombine.md","articles":[]},"previous":{"title":"Invariant","level":"1.2.8","depth":2,"path":"invariant.md","ref":"invariant.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"monad.md","mtime":"2016-06-18T19:50:22.431Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-18T20:02:33.141Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

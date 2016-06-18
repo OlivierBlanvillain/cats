@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Functor · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="id.html" />
+    
+    
+    <link rel="prev" href="foldable.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="typeclasses.html">
+            
+                <a href="typeclasses.html">
+            
+                    
+                    Typeclasses
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="applicative.html">
+            
+                <a href="applicative.html">
+            
+                    
+                    Applicative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    Apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contravariant.html">
+            
+                <a href="contravariant.html">
+            
+                    
+                    Contravariant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    Faq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="foldable.html">
+            
+                <a href="foldable.html">
+            
+                    
+                    Foldable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="functor.html">
+            
+                <a href="functor.html">
+            
+                    
+                    Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="id.html">
+            
+                <a href="id.html">
+            
+                    
+                    Id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="invariant.html">
+            
+                <a href="invariant.html">
+            
+                    
+                    Invariant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="monad.html">
+            
+                <a href="monad.html">
+            
+                    
+                    Monad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="monadcombine.md">
+            
+                <a href="monadcombine.md">
+            
+                    
+                    Monadcombine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="monadfilter.md">
+            
+                <a href="monadfilter.md">
+            
+                    
+                    Monadfilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="monoid.html">
+            
+                <a href="monoid.html">
+            
+                    
+                    Monoid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="monoidk.md">
+            
+                <a href="monoidk.md">
+            
+                    
+                    Monoidk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="semigroup.html">
+            
+                <a href="semigroup.html">
+            
+                    
+                    Semigroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="semigroupk.html">
+            
+                <a href="semigroupk.html">
+            
+                    
+                    Semigroupk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="show.md">
+            
+                <a href="show.md">
+            
+                    
+                    Show
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="traverse.html">
+            
+                <a href="traverse.html">
+            
+                    
+                    Traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Data Types
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="const.html">
+            
+                <a href="const.html">
+            
+                    
+                    Const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="freeapplicative.html">
+            
+                <a href="freeapplicative.html">
+            
+                    
+                    Freeapplicative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="freemonad.html">
+            
+                <a href="freemonad.html">
+            
+                    
+                    Freemonad
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="kleisli.html">
+            
+                <a href="kleisli.html">
+            
+                    
+                    Kleisli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="oneand.html">
+            
+                <a href="oneand.html">
+            
+                    
+                    Oneand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="optiont.html">
+            
+                <a href="optiont.html">
+            
+                    
+                    Optiont
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="state.html">
+            
+                <a href="state.html">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="validated.html">
+            
+                <a href="validated.html">
+            
+                    
+                    Validated
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="xor.html">
+            
+                <a href="xor.html">
+            
+                    
+                    Xor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CONTRIBUTING.html">
+            
+                <a href="CONTRIBUTING.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PROCESS.html">
+            
+                <a href="PROCESS.html">
+            
+                    
+                    Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="AUTHORS.html">
+            
+                <a href="AUTHORS.html">
+            
+                    
+                    Authors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CHANGES.html">
+            
+                <a href="CHANGES.html">
+            
+                    
+                    Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Functor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="functor">Functor</h1>
+<p>A <code>Functor</code> is a ubiquitous type class involving types that have one
+&quot;hole&quot;, i.e. types which have the shape <code>F[?]</code>, such as <code>Option</code>,
+<code>List</code> and <code>Future</code>. (This is in contrast to a type like <code>Int</code> which has
+no hole, or <code>Tuple2</code> which has two holes (<code>Tuple2[?,?]</code>)).</p>
+<p>The <code>Functor</code> category involves a single operation, named <code>map</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](fa: <span class="hljs-type">F</span>[<span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>): <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]
+</code></pre>
+<p>This method takes a function <code>A =&gt; B</code> and turns an <code>F[A]</code> into an
+<code>F[B]</code>.  The name of the method <code>map</code> should remind you of the <code>map</code>
+method that exists on many classes in the Scala standard library, for
+example:</p>
+<pre><code class="lang-scala"><span class="hljs-type">Option</span>(<span class="hljs-number">1</span>).map(_ + <span class="hljs-number">1</span>)
+<span class="hljs-comment">// res0: Option[Int] = Some(2)</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>).map(_ + <span class="hljs-number">1</span>)
+<span class="hljs-comment">// res1: List[Int] = List(2, 3, 4)</span>
+
+<span class="hljs-type">Vector</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>).map(_.toString)
+<span class="hljs-comment">// res2: scala.collection.immutable.Vector[String] = Vector(1, 2, 3)</span>
+</code></pre>
+<h2 id="creating-functor-instances">Creating Functor instances</h2>
+<p>We can trivially create a <code>Functor</code> instance for a type which has a well
+behaved <code>map</code> method:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> cats._
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> optionFunctor: <span class="hljs-type">Functor</span>[<span class="hljs-type">Option</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Functor</span>[<span class="hljs-type">Option</span>] {
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">A</span>,<span class="hljs-type">B</span>](fa: <span class="hljs-type">Option</span>[<span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>) = fa map f
+}
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> listFunctor: <span class="hljs-type">Functor</span>[<span class="hljs-type">List</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Functor</span>[<span class="hljs-type">List</span>] {
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">A</span>,<span class="hljs-type">B</span>](fa: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>])(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>) = fa map f
+}
+</code></pre>
+<p>However, functors can also be created for types which don&apos;t have a <code>map</code>
+method. For example, if we create a <code>Functor</code> for <code>Function1[In, ?]</code>
+we can use <code>andThen</code> to implement <code>map</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">function1Functor</span></span>[<span class="hljs-type">In</span>]: <span class="hljs-type">Functor</span>[<span class="hljs-type">Function1</span>[<span class="hljs-type">In</span>, ?]] =
+  <span class="hljs-keyword">new</span> <span class="hljs-type">Functor</span>[<span class="hljs-type">Function1</span>[<span class="hljs-type">In</span>, ?]] {
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">A</span>,<span class="hljs-type">B</span>](fa: <span class="hljs-type">In</span> =&gt; <span class="hljs-type">A</span>)(f: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">B</span>): <span class="hljs-type">Function1</span>[<span class="hljs-type">In</span>,<span class="hljs-type">B</span>] = fa andThen f
+  }
+</code></pre>
+<p>This example demonstrates the use of the
+<a href="https://github.com/non/kind-projector" _target="blank">kind-projector compiler plugin</a>.
+This compiler plugin can help us when we need to change the number of type
+holes. In the example above, we took a type which normally has two type holes, 
+<code>Function1[?,?]</code> and constrained one of the holes to be the <code>In</code> type, 
+leaving just one hole for the return type, resulting in <code>Function1[In,?]</code>. 
+Without kind-projector, we&apos;d have to write this as something like 
+<code>({type F[A] = Function1[In,A]})#F</code>, which is much harder to read and understand.</p>
+<h2 id="using-functor">Using Functor</h2>
+<h3 id="map">map</h3>
+<p><code>List</code> is a functor which applies the function to each element of the list:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> len: <span class="hljs-type">String</span> =&gt; <span class="hljs-type">Int</span> = _.length
+<span class="hljs-comment">// len: String =&gt; Int = &lt;function1&gt;</span>
+
+<span class="hljs-type">Functor</span>[<span class="hljs-type">List</span>].map(<span class="hljs-type">List</span>(<span class="hljs-string">&quot;qwer&quot;</span>, <span class="hljs-string">&quot;adsfg&quot;</span>))(len)
+<span class="hljs-comment">// res5: List[Int] = List(4, 5)</span>
+</code></pre>
+<p><code>Option</code> is a functor which only applies the function when the <code>Option</code> value 
+is a <code>Some</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-type">Functor</span>[<span class="hljs-type">Option</span>].map(<span class="hljs-type">Some</span>(<span class="hljs-string">&quot;adsf&quot;</span>))(len) <span class="hljs-comment">// Some(x) case: function is applied to x; result is wrapped in Some</span>
+<span class="hljs-comment">// res6: Option[Int] = Some(4)</span>
+
+<span class="hljs-type">Functor</span>[<span class="hljs-type">Option</span>].map(<span class="hljs-type">None</span>)(len) <span class="hljs-comment">// None case: simply returns None (function is not applied)</span>
+<span class="hljs-comment">// res7: Option[Int] = None</span>
+</code></pre>
+<h2 id="derived-methods">Derived methods</h2>
+<h3 id="lift">lift</h3>
+<p>We can use <code>Functor</code> to &quot;lift&quot; a function from <code>A =&gt; B</code> to <code>F[A] =&gt; F[B]</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> lenOption: <span class="hljs-type">Option</span>[<span class="hljs-type">String</span>] =&gt; <span class="hljs-type">Option</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Functor</span>[<span class="hljs-type">Option</span>].lift(len)
+<span class="hljs-comment">// lenOption: Option[String] =&gt; Option[Int] = &lt;function1&gt;</span>
+
+lenOption(<span class="hljs-type">Some</span>(<span class="hljs-string">&quot;abcd&quot;</span>))
+<span class="hljs-comment">// res8: Option[Int] = Some(4)</span>
+</code></pre>
+<h3 id="fproduct">fproduct</h3>
+<p><code>Functor</code> provides an <code>fproduct</code> function which pairs a value with the
+result of applying a function to that value.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> source = <span class="hljs-type">List</span>(<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;ccccc&quot;</span>)
+<span class="hljs-comment">// source: List[String] = List(a, aa, b, ccccc)</span>
+
+<span class="hljs-type">Functor</span>[<span class="hljs-type">List</span>].fproduct(source)(len).toMap
+<span class="hljs-comment">// res9: scala.collection.immutable.Map[String,Int] = Map(a -&gt; 1, aa -&gt; 2, b -&gt; 1, ccccc -&gt; 5)</span>
+</code></pre>
+<h3 id="compose">compose</h3>
+<p>Functors compose! Given any functor <code>F[_]</code> and any functor <code>G[_]</code> we can
+create a new functor <code>F[G[_]]</code> by composing them via the <code>Nested</code> data type:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> cats.data.<span class="hljs-type">Nested</span>
+<span class="hljs-comment">// import cats.data.Nested</span>
+
+<span class="hljs-keyword">val</span> listOpt = <span class="hljs-type">Nested</span>[<span class="hljs-type">List</span>, <span class="hljs-type">Option</span>, <span class="hljs-type">Int</span>](<span class="hljs-type">List</span>(<span class="hljs-type">Some</span>(<span class="hljs-number">1</span>), <span class="hljs-type">None</span>, <span class="hljs-type">Some</span>(<span class="hljs-number">3</span>)))
+<span class="hljs-comment">// listOpt: cats.data.Nested[List,Option,Int] = Nested(List(Some(1), None, Some(3)))</span>
+
+<span class="hljs-type">Functor</span>[<span class="hljs-type">Nested</span>[<span class="hljs-type">List</span>, <span class="hljs-type">Option</span>, ?]].map(listOpt)(_ + <span class="hljs-number">1</span>)
+<span class="hljs-comment">// res10: cats.data.Nested[[+A]List[A],Option,Int] = Nested(List(Some(2), None, Some(4)))</span>
+
+<span class="hljs-keyword">val</span> optList = <span class="hljs-type">Nested</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">List</span>, <span class="hljs-type">Int</span>](<span class="hljs-type">Some</span>(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)))
+<span class="hljs-comment">// optList: cats.data.Nested[Option,List,Int] = Nested(Some(List(1, 2, 3)))</span>
+
+<span class="hljs-type">Functor</span>[<span class="hljs-type">Nested</span>[<span class="hljs-type">Option</span>, <span class="hljs-type">List</span>, ?]].map(optList)(_ + <span class="hljs-number">1</span>)
+<span class="hljs-comment">// res11: cats.data.Nested[Option,[+A]List[A],Int] = Nested(Some(List(2, 3, 4)))</span>
+</code></pre>
+<h2 id="subtyping">Subtyping</h2>
+<p>Functors have a natural relationship with subtyping:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span>
+<span class="hljs-comment">// defined class A</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">A</span></span>
+<span class="hljs-comment">// defined class B</span>
+
+<span class="hljs-keyword">val</span> b: <span class="hljs-type">B</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">B</span>
+<span class="hljs-comment">// b: B = B@518ea869</span>
+
+<span class="hljs-keyword">val</span> a: <span class="hljs-type">A</span> = b
+<span class="hljs-comment">// a: A = B@518ea869</span>
+
+<span class="hljs-keyword">val</span> listB: <span class="hljs-type">List</span>[<span class="hljs-type">B</span>] = <span class="hljs-type">List</span>(<span class="hljs-keyword">new</span> <span class="hljs-type">B</span>)
+<span class="hljs-comment">// listB: List[B] = List(B@52475ef6)</span>
+
+<span class="hljs-keyword">val</span> listA1: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>] = listB.map(b =&gt; b: <span class="hljs-type">A</span>)
+<span class="hljs-comment">// listA1: List[A] = List(B@52475ef6)</span>
+
+<span class="hljs-keyword">val</span> listA2: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>] = listB.map(identity[<span class="hljs-type">A</span>])
+<span class="hljs-comment">// listA2: List[A] = List(B@52475ef6)</span>
+
+<span class="hljs-keyword">val</span> listA3: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>] = <span class="hljs-type">Functor</span>[<span class="hljs-type">List</span>].widen[<span class="hljs-type">B</span>, <span class="hljs-type">A</span>](listB)
+<span class="hljs-comment">// listA3: List[A] = List(B@52475ef6)</span>
+</code></pre>
+<p>Subtyping relationships are &quot;lifted&quot; by functors, such that if <code>F</code> is a
+lawful functor and <code>A &lt;: B</code> then <code>F[A] &lt;: F[B]</code> - almost. Almost, because to
+convert an <code>F[B]</code> to an <code>F[A]</code> a call to <code>map(identity[A])</code> is needed
+(provided as <code>widen</code> for convenience). The functor laws guarantee that
+<code>fa map identity == fa</code>, however.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="foldable.html" class="navigation navigation-prev " aria-label="Previous page: Foldable">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="id.html" class="navigation navigation-next " aria-label="Next page: Id">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"default","title":"Functor","section":"typeclasses","source":"core/src/main/scala/cats/Functor.scala","scaladoc":"#cats.Functor","level":"1.2.6","depth":2,"next":{"title":"Id","level":"1.2.7","depth":2,"path":"id.md","ref":"id.md","articles":[]},"previous":{"title":"Foldable","level":"1.2.5","depth":2,"path":"foldable.md","ref":"foldable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"functor.md","mtime":"2016-06-18T19:50:49.396Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-18T20:02:33.141Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
