@@ -1,0 +1,9 @@
+[submodule "stainless-src"]
+	path = stainless-library
+	url = git@github.com:OlivierBlanvillain/stainless.git
+[submodule "stainless-prover"]
+	path = stainless-prover
+	url = git@github.com:OlivierBlanvillain/stainless.git
+[submodule "stainless-library"]
+	path = stainless-library
+	url = git@github.com:OlivierBlanvillain/stainless.git
