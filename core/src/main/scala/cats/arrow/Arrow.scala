@@ -3,9 +3,7 @@ package arrow
 
 import cats.functor.Strong
 
-import simulacrum.typeclass
-
-@typeclass trait Arrow[F[_, _]] extends Split[F] with Strong[F] with Category[F] { self =>
+trait Arrow[F[_, _]] extends Split[F] with Strong[F] with Category[F] {
 
   /**
    * Lift a function into the context of an Arrow
@@ -20,6 +18,5 @@ import simulacrum.typeclass
     compose(swap, compose(first[A, B, C](fa), swap))
   }
 
-  override def split[A, B, C, D](f: F[A, B], g: F[C, D]): F[(A, C), (B, D)] =
-    andThen(first(f), second(g))
+  def split[A, B, C, D](f: F[A, B], g: F[C, D]): F[(A, C), (B, D)]
 }

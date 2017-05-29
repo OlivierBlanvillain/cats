@@ -1,13 +1,11 @@
 package cats
 
-import simulacrum.typeclass
-
 /**
  * `CoflatMap` is the dual of `FlatMap`.
  *
  * Must obey the laws in cats.laws.CoflatMapLaws
  */
-@typeclass trait CoflatMap[F[_]] extends Functor[F] {
+trait CoflatMap[F[_]] extends Functor[F] {
 
   /**
    * `coflatMap` is the dual of `flatMap` on `FlatMap`. It applies
@@ -42,6 +40,5 @@ import simulacrum.typeclass
    * res0: Option[Option[Int]] = Some(Some(3))
    * }}}
    */
-  def coflatten[A](fa: F[A]): F[F[A]] =
-    coflatMap(fa)(fa => fa)
+  def coflatten[A](fa: F[A]): F[F[A]]
 }

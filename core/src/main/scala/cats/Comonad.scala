@@ -1,8 +1,5 @@
 package cats
 
-import simulacrum.typeclass
-
-
 /**
  * Comonad
  *
@@ -11,7 +8,7 @@ import simulacrum.typeclass
  *
  * Must obey the laws defined in cats.laws.ComonadLaws.
  */
-@typeclass trait Comonad[F[_]] extends CoflatMap[F] {
+trait Comonad[F[_]] extends CoflatMap[F] {
 
   /**
    * `extract` is the dual of `pure` on Monad (via `Applicative`)

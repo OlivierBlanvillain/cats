@@ -1,9 +1,7 @@
 package cats
 package arrow
 
-import simulacrum.typeclass
-
-@typeclass trait Split[F[_, _]] extends Compose[F] { self =>
+trait Split[F[_, _]] extends Compose[F] {
 
   /**
    * Create a new `F` that splits its input between `f` and `g`

@@ -1,7 +1,5 @@
 package cats
 
-import simulacrum.typeclass
-
 /**
  * MonoidK is a universal monoid which operates on kinds.
  *
@@ -22,24 +20,10 @@ import simulacrum.typeclass
  *    combination operation and empty value just depend on the
  *    structure of F, but not on the structure of A.
  */
-@typeclass trait MonoidK[F[_]] extends SemigroupK[F] { self =>
+trait MonoidK[F[_]] extends SemigroupK[F] {
 
   /**
    * Given a type A, create an "empty" F[A] value.
    */
   def empty[A]: F[A]
-
-  /**
-   * Given a type A, create a concrete Monoid[F[A]].
-   */
-  override def algebra[A]: Monoid[F[A]] =
-    new Monoid[F[A]] {
-      def empty: F[A] = self.empty
-      def combine(x: F[A], y: F[A]): F[A] = self.combineK(x, y)
-    }
-
-  override def compose[G[_]]: MonoidK[λ[α => F[G[α]]]] =
-    new ComposedMonoidK[F, G] {
-      val F = self
-    }
 }

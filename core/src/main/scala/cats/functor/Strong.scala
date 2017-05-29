@@ -1,12 +1,10 @@
 package cats
 package functor
 
-import simulacrum.typeclass
-
 /**
  * Must obey the laws defined in cats.laws.StrongLaws.
  */
-@typeclass trait Strong[F[_, _]] extends Profunctor[F] {
+trait Strong[F[_, _]] extends Profunctor[F] {
 
   /**
    * Create a new `F` that takes two inputs, but only modifies the first input

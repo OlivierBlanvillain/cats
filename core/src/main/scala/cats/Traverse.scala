@@ -1,7 +1,5 @@
 package cats
 
-import simulacrum.typeclass
-
 /**
  * Traverse, also known as Traversable.
  *
@@ -13,7 +11,7 @@ import simulacrum.typeclass
  *
  * See: [[https://www.cs.ox.ac.uk/jeremy.gibbons/publications/iterator.pdf The Essence of the Iterator Pattern]]
  */
-@typeclass trait Traverse[F[_]] extends Functor[F] with Foldable[F] { self =>
+trait Traverse[F[_]] extends Functor[F] with Foldable[F] {
 
   /**
    * Given a function which returns a G effect, thread this effect
@@ -82,19 +80,4 @@ import simulacrum.typeclass
    */
   def flatSequence[G[_], A](fgfa: F[G[F[A]]])(implicit G: Applicative[G], F: FlatMap[F]): G[F[A]] =
     G.map(sequence(fgfa))(F.flatten)
-
-  def compose[G[_]: Traverse]: Traverse[λ[α => F[G[α]]]] =
-    new ComposedTraverse[F, G] {
-      val F = self
-      val G = Traverse[G]
-    }
-
-  def composeFilter[G[_]: TraverseFilter]: TraverseFilter[λ[α => F[G[α]]]] =
-    new ComposedTraverseFilter[F, G] {
-      val F = self
-      val G = TraverseFilter[G]
-    }
-
-  override def map[A, B](fa: F[A])(f: A => B): F[B] =
-    traverse[Id, A, B](fa)(f)
 }
