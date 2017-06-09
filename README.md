@@ -1,10 +1,15 @@
 # Cats + Stainless = ♥
 
+[Report](https://github.com/OlivierBlanvillain/cats/blob/proofs/report/proving-the-cats-library.pdf)
+
 [Presentation](https://docs.google.com/presentation/d/1RtMkQ_N623lF0iZHY7Wpo0RL-Pd8bdn-TV6JuniKdOU)
 
 ```bash
 $ git clone --recursive --branch proofs git@github.com:OlivierBlanvillain/cats.git
 $ sbt prove
+
+$ # Go grap a coffee, this ^ takes more than 16 minutes to run on my laptop.
+$ # See https://github.com/epfl-lara/stainless/issues/38.
 ```
 
 ```scala
